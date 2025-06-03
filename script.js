@@ -128,12 +128,45 @@ function initializeNavigation() {
         });
     });
     
-    // Navbar scroll effect
+    // Navbar scroll effect and scroll indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const profileImage = document.getElementById('profileImage');
+    const heroSection = document.getElementById('home');
+    const aboutSection = document.getElementById('about');
+    
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+        const scrollY = window.scrollY;
+        
+        // Navbar scroll effect
+        if (scrollY > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+        
+        // Hide scroll indicator when scrolling past hero section
+        const heroHeight = heroSection.offsetHeight;
+        if (scrollY > heroHeight * 0.3) {
+            scrollIndicator.classList.add('hidden');
+        } else {
+            scrollIndicator.classList.remove('hidden');
+        }
+        
+        // Simple image border-radius transformation during scroll
+        if (profileImage && aboutSection && heroSection) {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const scrollProgress = Math.max(0, Math.min(1, scrollY / heroBottom));
+            
+            // Transform border-radius from square to circle as user scrolls
+            const borderRadius = 20 + (130 * scrollProgress); // 20px to 150px
+            profileImage.style.borderRadius = `${Math.min(borderRadius, 150)}px`;
+            
+            // Reduce animation intensity during scroll
+            if (scrollY > heroBottom * 0.3) {
+                profileImage.style.animationDuration = '10s';
+            } else {
+                profileImage.style.animationDuration = '6s';
+            }
         }
     });
     
