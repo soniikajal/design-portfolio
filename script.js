@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLightbox();
     initializeContactForm();
     initializeTypingEffect();
+    initializeImageMorphing();
 });
 
 // Particle Animation for Hero Background
@@ -130,9 +131,6 @@ function initializeNavigation() {
     
     // Navbar scroll effect and scroll indicator
     const scrollIndicator = document.querySelector('.scroll-indicator');
-    const profileImage = document.getElementById('profileImage');
-    const heroSection = document.getElementById('home');
-    const aboutSection = document.getElementById('about');
     
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
@@ -145,28 +143,12 @@ function initializeNavigation() {
         }
         
         // Hide scroll indicator when scrolling past hero section
+        const heroSection = document.getElementById('home');
         const heroHeight = heroSection.offsetHeight;
         if (scrollY > heroHeight * 0.3) {
             scrollIndicator.classList.add('hidden');
         } else {
             scrollIndicator.classList.remove('hidden');
-        }
-        
-        // Simple image border-radius transformation during scroll
-        if (profileImage && aboutSection && heroSection) {
-            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            const scrollProgress = Math.max(0, Math.min(1, scrollY / heroBottom));
-            
-            // Transform border-radius from square to circle as user scrolls
-            const borderRadius = 20 + (130 * scrollProgress); // 20px to 150px
-            profileImage.style.borderRadius = `${Math.min(borderRadius, 150)}px`;
-            
-            // Reduce animation intensity during scroll
-            if (scrollY > heroBottom * 0.3) {
-                profileImage.style.animationDuration = '10s';
-            } else {
-                profileImage.style.animationDuration = '6s';
-            }
         }
     });
     
@@ -194,6 +176,78 @@ function initializeNavigation() {
     
     window.addEventListener('scroll', highlightNavigation);
     highlightNavigation(); // Call once on load
+}
+
+// Simple image initialization - no morphing needed
+function initializeImageMorphing() {
+    // Simple function - images are now statically placed in HTML
+    console.log('Images initialized');
+}
+            const endSize = window.innerWidth <= 480 ? 100 : window.innerWidth <= 768 ? 120 : 150;
+            const currentSize = startSize - (startSize - endSize) * transitionProgress;
+            
+            const startRadius = 20;
+            const endRadius = currentSize / 2; // Perfect circle
+            const currentRadius = startRadius + (endRadius - startRadius) * transitionProgress;
+            
+            const startRight = window.innerWidth <= 480 ? 2 : window.innerWidth <= 768 ? 5 : 10;
+            const endRight = window.innerWidth <= 480 ? 45 : window.innerWidth <= 768 ? 50 : 60;
+            const currentRight = startRight + (endRight - startRight) * transitionProgress;
+            
+            const startTop = 50;
+            const endTop = 30;
+            const currentTop = startTop - (startTop - endTop) * transitionProgress;
+            
+            profileImage.style.width = `${currentSize}px`;
+            profileImage.style.height = `${currentSize}px`;
+            profileImage.style.borderRadius = `${currentRadius}px`;
+            profileImage.style.right = `${currentRight}%`;
+            profileImage.style.top = `${currentTop}%`;
+            profileImage.style.transform = 'translateY(-50%)';
+            
+        } else if (scrollY >= aboutTop - windowHeight * 0.2) {
+            // In about section
+            if (!isInAboutSection) {
+                profileImage.classList.remove('morphing');
+                profileImage.classList.add('about-position');
+                profileImage.style.position = 'absolute';
+                profileImage.style.animation = 'none';
+                
+                // Move to about section container
+                if (aboutImage && profileImage.parentElement !== aboutImage) {
+                    aboutImage.appendChild(profileImage);
+                }
+                
+                // Set final about section styles
+                const finalSize = window.innerWidth <= 480 ? 100 : window.innerWidth <= 768 ? 120 : 150;
+                profileImage.style.width = `${finalSize}px`;
+                profileImage.style.height = `${finalSize}px`;
+                profileImage.style.borderRadius = `${finalSize / 2}px`;
+                profileImage.style.top = '50%';
+                profileImage.style.right = 'auto';
+                profileImage.style.left = '50%';
+                profileImage.style.transform = 'translate(-50%, -50%)';
+                
+                isInAboutSection = true;
+            }
+        }
+        
+        ticking = false;
+    }
+    
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateImageMorphing);
+            ticking = true;
+        }
+    }
+    
+    // Initial call
+    updateImageMorphing();
+    
+    // Bind scroll event
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', updateImageMorphing);
 }
 
 // Scroll animations

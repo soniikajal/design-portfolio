@@ -243,12 +243,9 @@ body {
     height: 300px;
     border-radius: 20px;
     overflow: hidden;
-    position: relative;
     background: linear-gradient(135deg, #667eea 0%, #ffd700 25%, #764ba2 100%);
     padding: 5px;
     animation: float 6s ease-in-out infinite;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 2;
 }
 
 .profile-image img {
@@ -256,7 +253,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-    transition: border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Purple overlay removed from profile image */
@@ -300,6 +296,15 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    position: relative;
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
 }
 
 .about-text h3 {
@@ -1103,6 +1108,21 @@ body {
     .profile-image {
         width: 200px;
         height: 200px;
+        right: 2%;
+    }
+
+    .profile-image.morphing {
+        right: 45%;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+
+    .profile-image.about-position {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        right: 5%;
     }
 
     .projects-grid {
