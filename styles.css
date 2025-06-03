@@ -590,6 +590,11 @@ body {
     color: #f1c40f;
 }
 
+.status-badge.awaiting {
+    background: rgba(155, 89, 182, 0.2);
+    color: #9b59b6;
+}
+
 /* Gallery Section */
 .gallery {
     padding: 100px 0;
