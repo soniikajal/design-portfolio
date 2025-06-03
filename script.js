@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeNavigation();
     initializeTiltEffects();
-    initializeLightbox();
     initializeContactForm();
     initializeTypingEffect();
     initializeImageMorphing();
@@ -243,91 +242,6 @@ function initializeTiltEffects() {
             
             element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
         });
-    });
-}
-
-// Lightbox functionality for art gallery
-function initializeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxMedium = document.getElementById('lightbox-medium');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const viewArtworkButtons = document.querySelectorAll('.view-artwork');
-    
-    // Artwork data
-    const artworks = [
-        {
-            src: 'artworks/district.png',
-            title: 'District Champion Artwork',
-            medium: 'Traditional Art',
-            caption: 'Award-winning artwork that secured first place in district-level competition'
-        },
-        {
-            src: 'artworks/product2.png',
-            title: 'Handcrafted Beauty',
-            medium: 'Traditional Medium',
-            caption: 'Meticulously crafted artwork showcasing traditional techniques'
-        },
-        {
-            src: 'artworks/product3.png',
-            title: 'Creative Expression',
-            medium: 'Mixed Media',
-            caption: 'Vibrant artwork expressing creativity through traditional methods'
-        },
-        {
-            src: 'artworks/Screenshot%202025-06-03%20at%203.03.02%20PM.png',
-            title: 'Digital Artistry',
-            medium: 'Digital Medium',
-            caption: 'Contemporary artwork created with digital tools and techniques'
-        },
-        {
-            src: 'artworks/Screenshot%202025-06-03%20at%203.05.13%20PM.png',
-            title: 'Artistic Vision',
-            medium: 'Contemporary Art',
-            caption: 'Modern artistic interpretation blending traditional and digital elements'
-        },
-        {
-            src: 'artworks/Screenshot%202025-06-03%20at%203.06.30%20PM.png',
-            title: 'Creative Masterpiece',
-            medium: 'Traditional & Digital',
-            caption: 'Innovative artwork combining traditional techniques with modern aesthetics'
-        }
-    ];
-    
-    viewArtworkButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const artworkIndex = parseInt(button.getAttribute('data-artwork'));
-            const artwork = artworks[artworkIndex];
-            
-            lightboxImage.src = artwork.src;
-            lightboxTitle.textContent = artwork.title;
-            lightboxMedium.textContent = artwork.medium;
-            lightboxCaption.textContent = artwork.caption;
-            
-            lightbox.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    lightboxClose.addEventListener('click', closeLightbox);
-    
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.style.display === 'block') {
-            closeLightbox();
-        }
     });
 }
 
