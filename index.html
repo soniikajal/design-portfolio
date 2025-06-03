@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajal Soni - Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Kajal Soni</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Art Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Kajal Soni</span>
+                </h1>
+                <p class="hero-tagline">Design meets detail — A blend of art and logic.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/300x300/4a00e0/ffffff?text=KS" alt="Kajal Soni">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello, I'm Kajal Soni</h3>
+                    <p>A passionate designer and developer who believes in creating meaningful digital experiences. Currently pursuing B.Tech in ICE at NSUT (Class of 2028), I combine technical expertise with creative vision to bring ideas to life.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>B.Tech ICE @ NSUT (Class of 2028)</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-palette"></i>
+                            <div>
+                                <h4>Expertise</h4>
+                                <p>Graphic Designer + Web Developer</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Founder</h4>
+                                <p>Kish Kalakriti</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-card">
+                        <img src="https://via.placeholder.com/400x500/8a2be2/ffffff?text=About+Me" alt="About Kajal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Canva</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-magic"></i>
+                            <span>Creatie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/4a00e0/ffffff?text=NSUT+Orbit" alt="NSUT Orbit">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>NSUT Orbit</h3>
+                        <p>A comprehensive platform for NSUT students featuring event management, academic resources, and community networking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/8a2be2/ffffff?text=Kish+Kalakriti" alt="Kish Kalakriti">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Kish Kalakriti Website</h3>
+                        <p>Official website for Kish Kalakriti showcasing traditional art pieces, custom commissions, and artistic services.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge development">Under Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/00d4aa/ffffff?text=Srijan+Enactus" alt="Srijan Enactus">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Srijan Enactus Page</h3>
+                        <p>Interactive landing page for Srijan Enactus showcasing social impact projects and community initiatives.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/ff6b6b/ffffff?text=Graphic+Design" alt="Graphic Design Showcase">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Graphic Design Showcase</h3>
+                        <p>Collection of social media creatives, brand designs, and visual communications for various clients and projects.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Canva</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Creatie</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Art Gallery</h2>
+            <p class="gallery-subtitle">Traditional handmade artworks crafted with passion</p>
+            <div class="gallery-grid">
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/ff9500/ffffff?text=Watercolor+Landscape" alt="Watercolor Landscape">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="0">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Serene Waters</h3>
+                        <p class="medium">Watercolor on Paper</p>
+                        <p class="caption">A peaceful landscape capturing the essence of nature's tranquility</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/e74c3c/ffffff?text=Abstract+Portrait" alt="Abstract Portrait">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="1">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Ethereal Dreams</h3>
+                        <p class="medium">Acrylic on Canvas</p>
+                        <p class="caption">An abstract interpretation of human emotions and dreams</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/9b59b6/ffffff?text=Ink+Drawing" alt="Ink Drawing">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="2">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Mystic Lines</h3>
+                        <p class="medium">Ink on Paper</p>
+                        <p class="caption">Intricate line work exploring the beauty of minimalism</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/27ae60/ffffff?text=Nature+Study" alt="Nature Study">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="3">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Botanical Harmony</h3>
+                        <p class="medium">Watercolor & Ink</p>
+                        <p class="caption">Detailed study of flora showcasing nature's perfect design</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/f39c12/ffffff?text=Traditional+Art" alt="Traditional Art">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="4">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Cultural Heritage</h3>
+                        <p class="medium">Mixed Media</p>
+                        <p class="caption">Celebrating traditional art forms with contemporary interpretation</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+
+                <div class="artwork-card" data-tilt>
+                    <div class="artwork-image">
+                        <img src="https://via.placeholder.com/300x400/34495e/ffffff?text=Charcoal+Portrait" alt="Charcoal Portrait">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork" data-artwork="5">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Soul Reflections</h3>
+                        <p class="medium">Charcoal on Paper</p>
+                        <p class="caption">Expressive portraiture capturing the depth of human emotion</p>
+                        <a href="https://instagram.com/kish.kalakriti" class="buy-link">DM on Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-medium"></p>
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's create something amazing together!</h3>
+                    <p>Whether you need a stunning design, a functional website, or custom artwork, I'm here to bring your vision to life.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:kajal.soni.ug24@nsut.ac.in">kajal.soni.ug24@nsut.ac.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>New Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/kajal-soni" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/kajal-soni" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com/kish.kalakriti" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Kajal Soni. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
