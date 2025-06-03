@@ -259,40 +259,40 @@ function initializeLightbox() {
     // Artwork data
     const artworks = [
         {
-            src: 'https://via.placeholder.com/600x800/ff9500/ffffff?text=Watercolor+Landscape',
-            title: 'Serene Waters',
-            medium: 'Watercolor on Paper',
-            caption: 'A peaceful landscape capturing the essence of nature\'s tranquility'
+            src: 'artworks/district.png',
+            title: 'District Champion Artwork',
+            medium: 'Traditional Art',
+            caption: 'Award-winning artwork that secured first place in district-level competition'
         },
         {
-            src: 'https://via.placeholder.com/600x800/e74c3c/ffffff?text=Abstract+Portrait',
-            title: 'Ethereal Dreams',
-            medium: 'Acrylic on Canvas',
-            caption: 'An abstract interpretation of human emotions and dreams'
+            src: 'artworks/product2.png',
+            title: 'Handcrafted Beauty',
+            medium: 'Traditional Medium',
+            caption: 'Meticulously crafted artwork showcasing traditional techniques'
         },
         {
-            src: 'https://via.placeholder.com/600x800/9b59b6/ffffff?text=Ink+Drawing',
-            title: 'Mystic Lines',
-            medium: 'Ink on Paper',
-            caption: 'Intricate line work exploring the beauty of minimalism'
-        },
-        {
-            src: 'https://via.placeholder.com/600x800/27ae60/ffffff?text=Nature+Study',
-            title: 'Botanical Harmony',
-            medium: 'Watercolor & Ink',
-            caption: 'Detailed study of flora showcasing nature\'s perfect design'
-        },
-        {
-            src: 'https://via.placeholder.com/600x800/f39c12/ffffff?text=Traditional+Art',
-            title: 'Cultural Heritage',
+            src: 'artworks/product3.png',
+            title: 'Creative Expression',
             medium: 'Mixed Media',
-            caption: 'Celebrating traditional art forms with contemporary interpretation'
+            caption: 'Vibrant artwork expressing creativity through traditional methods'
         },
         {
-            src: 'https://via.placeholder.com/600x800/34495e/ffffff?text=Charcoal+Portrait',
-            title: 'Soul Reflections',
-            medium: 'Charcoal on Paper',
-            caption: 'Expressive portraiture capturing the depth of human emotion'
+            src: 'artworks/Screenshot%202025-06-03%20at%203.03.02%20PM.png',
+            title: 'Digital Artistry',
+            medium: 'Digital Medium',
+            caption: 'Contemporary artwork created with digital tools and techniques'
+        },
+        {
+            src: 'artworks/Screenshot%202025-06-03%20at%203.05.13%20PM.png',
+            title: 'Artistic Vision',
+            medium: 'Contemporary Art',
+            caption: 'Modern artistic interpretation blending traditional and digital elements'
+        },
+        {
+            src: 'artworks/Screenshot%202025-06-03%20at%203.06.30%20PM.png',
+            title: 'Creative Masterpiece',
+            medium: 'Traditional & Digital',
+            caption: 'Innovative artwork combining traditional techniques with modern aesthetics'
         }
     ];
     

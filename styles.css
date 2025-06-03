@@ -714,6 +714,43 @@ body {
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
+/* Award Winner Special Styling */
+.artwork-card.district-winner {
+    border: 3px solid #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    position: relative;
+}
+
+.artwork-card.district-winner:hover {
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+    transform: translateY(-10px) scale(1.02);
+}
+
+.award-badge {
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.artwork-card.district-winner .artwork-info h3 {
+    color: #ffd700;
+}
+
 /* Lightbox */
 .lightbox {
     display: none;

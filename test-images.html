@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+    <style>
+        img { width: 200px; height: 250px; margin: 10px; border: 2px solid #ccc; }
+        .error { border-color: red; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <h2>All Artwork Images:</h2>
+    
+    <img src="artworks/district.png" alt="District" 
+         onload="console.log('✅ district.png loaded')" 
+         onerror="console.log('❌ district.png failed'); this.classList.add('error')">
+    
+    <img src="artworks/product2.png" alt="Product 2" 
+         onload="console.log('✅ product2.png loaded')" 
+         onerror="console.log('❌ product2.png failed'); this.classList.add('error')">
+    
+    <img src="artworks/product3.png" alt="Product 3" 
+         onload="console.log('✅ product3.png loaded')" 
+         onerror="console.log('❌ product3.png failed'); this.classList.add('error')">
+    
+    <img src="artworks/Screenshot%202025-06-03%20at%203.03.02%20PM.png" alt="Screenshot 1" 
+         onload="console.log('✅ Screenshot 1 loaded')" 
+         onerror="console.log('❌ Screenshot 1 failed'); this.classList.add('error')">
+    
+    <img src="artworks/Screenshot%202025-06-03%20at%203.05.13%20PM.png" alt="Screenshot 2" 
+         onload="console.log('✅ Screenshot 2 loaded')" 
+         onerror="console.log('❌ Screenshot 2 failed'); this.classList.add('error')">
+    
+    <img src="artworks/Screenshot%202025-06-03%20at%203.06.30%20PM.png" alt="Screenshot 3" 
+         onload="console.log('✅ Screenshot 3 loaded')" 
+         onerror="console.log('❌ Screenshot 3 failed'); this.classList.add('error')">
+    
+    <img src="artworks/Screenshot%202025-06-03%20at%203.06.52%20PM.png" alt="Screenshot 4" 
+         onload="console.log('✅ Screenshot 4 loaded')" 
+         onerror="console.log('❌ Screenshot 4 failed'); this.classList.add('error')">
+
+    <p>Open browser console to see loading results.</p>
+</body>
+</html>
