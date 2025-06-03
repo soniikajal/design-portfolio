@@ -534,3 +534,118 @@ function throttle(func, wait) {
 window.addEventListener('scroll', throttle(() => {
     // Your scroll event handlers here
 }, 16)); // ~60fps
+
+// Instagram Designs Modal Functionality
+const igDesigns = {
+    srijan: {
+        title: "Srijan Post Designs",
+        images: [
+            "igposts/srijan post/1.png",
+            "igposts/srijan post/2.png", 
+            "igposts/srijan post/3.png"
+        ]
+    },
+    crescendo: {
+        title: "Crescendo Cover Series Story",
+        images: [
+            "igposts/Cres-story/FB WallB-3.jpg"
+        ]
+    }
+};
+
+let currentSlide = 0;
+let currentDesign = null;
+
+function openIGModal(designType) {
+    const modal = document.getElementById('igModal');
+    const title = document.getElementById('igModalTitle');
+    const imagesContainer = document.getElementById('igImages');
+    
+    currentDesign = igDesigns[designType];
+    currentSlide = 0;
+    
+    title.textContent = currentDesign.title;
+    
+    // Create slideshow structure
+    imagesContainer.innerHTML = `
+        <div class="ig-slides-container" id="slidesContainer">
+            ${currentDesign.images.map((imagePath, index) => `
+                <div class="ig-slide">
+                    <img src="${imagePath}" alt="${currentDesign.title} - Image ${index + 1}">
+                </div>
+            `).join('')}
+        </div>
+        ${currentDesign.images.length > 1 ? `
+            <button class="ig-nav-btn ig-prev" onclick="changeSlide(-1)">&#8249;</button>
+            <button class="ig-nav-btn ig-next" onclick="changeSlide(1)">&#8250;</button>
+            <div class="ig-counter">
+                <span id="currentSlideNum">1</span> / ${currentDesign.images.length}
+            </div>
+        ` : ''}
+    `;
+    
+    updateSlidePosition();
+    modal.style.display = 'block';
+}
+
+function changeSlide(direction) {
+    if (!currentDesign) return;
+    
+    currentSlide += direction;
+    
+    if (currentSlide >= currentDesign.images.length) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = currentDesign.images.length - 1;
+    }
+    
+    updateSlidePosition();
+}
+
+function updateSlidePosition() {
+    const slidesContainer = document.getElementById('slidesContainer');
+    const counter = document.getElementById('currentSlideNum');
+    
+    if (slidesContainer) {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    if (counter) {
+        counter.textContent = currentSlide + 1;
+    }
+}
+
+// Close modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('igModal');
+    const closeBtn = document.querySelector('.ig-close');
+    
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+        currentDesign = null;
+        currentSlide = 0;
+    }
+    
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            currentDesign = null;
+            currentSlide = 0;
+        }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(event) {
+        if (modal.style.display === 'block') {
+            if (event.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (event.key === 'ArrowRight') {
+                changeSlide(1);
+            } else if (event.key === 'Escape') {
+                modal.style.display = 'none';
+                currentDesign = null;
+                currentSlide = 0;
+            }
+        }
+    });
+});

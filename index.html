@@ -240,29 +240,59 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Designs Section -->
+    <section id="ig-designs" class="projects">
+        <div class="container">
+            <h2 class="section-title">Instagram Designs</h2>
+            <div class="projects-grid">
                 <div class="project-card" data-tilt>
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/ff6b6b/ffffff?text=Graphic+Design" alt="Graphic Design Showcase">
+                        <img src="igposts/srijan post/1.png" alt="Srijan Post Designs">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="project-link" onclick="openIGModal('srijan')"><i class="fas fa-eye"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Graphic Design Showcase</h3>
-                        <p>Collection of social media creatives, brand designs, and visual communications for various clients and projects.</p>
+                        <h3>Srijan Post Designs</h3>
+                        <p>Creative Instagram post designs for Srijan community featuring modern layouts and engaging visuals.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Canva</span>
-                            <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">Creatie</span>
+                            <span class="tech-tag">Graphic Design</span>
                         </div>
                         <div class="project-status">
-                            <span class="status-badge live">Live</span>
+                            <span class="status-badge live">3 Designs</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="igposts/Cres-story/FB WallB-3.jpg" alt="Crescendo Cover Series Story">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" onclick="openIGModal('crescendo')"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Crescendo Cover Series Story</h3>
+                        <p>Artistic Instagram story design featuring elegant typography and visual composition for brand storytelling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Story Design</span>
+                            <span class="tech-tag">Brand Identity</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge live">1 Design</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -390,6 +420,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Instagram Designs Modal -->
+    <div id="igModal" class="ig-modal">
+        <div class="ig-modal-content">
+            <span class="ig-close">&times;</span>
+            <h3 id="igModalTitle"></h3>
+            <div class="ig-gallery">
+                <div id="igImages"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
