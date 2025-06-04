@@ -550,6 +550,15 @@ const igDesigns = {
         images: [
             "igposts/Cres-story/FB WallB-3.jpg"
         ]
+    },
+    hundred: {
+        title: "100 Series Designs",
+        images: [
+            "igposts/100/1.png",
+            "igposts/100/2.png",
+            "igposts/100/3.png",
+            "igposts/100/4.png"
+        ]
     }
 };
 
