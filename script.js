@@ -247,7 +247,7 @@ function initializeTiltEffects() {
 
 // Contact form functionality
 function initializeContactForm() {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
@@ -266,18 +266,41 @@ function initializeContactForm() {
             return;
         }
         
-        // Simulate form submission
+        // Show loading state
         const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
+        const formStatus = document.getElementById('form-status');
+        submitButton.classList.add('loading');
         submitButton.disabled = true;
+        formStatus.style.display = 'none';
         
-        setTimeout(() => {
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-            submitButton.textContent = originalText;
+        try {
+            // Submit to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success
+                formStatus.className = 'form-status success';
+                formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error
+            formStatus.className = 'form-status error';
+            formStatus.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly via email.';
+        } finally {
+            // Reset button state
+            submitButton.classList.remove('loading');
             submitButton.disabled = false;
-        }, 2000);
+            formStatus.style.display = 'block';
+        }
     });
 }
 

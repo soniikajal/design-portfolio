@@ -395,7 +395,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xovwvqrd" method="POST">
                     <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Your Name</label>
@@ -408,7 +408,11 @@
                         <textarea id="message" name="message" required></textarea>
                         <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">Sending...</span>
+                    </button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </div>
