@@ -574,6 +574,12 @@ const igDesigns = {
             "igposts/Cres-story/FB WallB-3.jpg"
         ]
     },
+    crescendoRC: {
+        title: "Sanya's Cover Series",
+        images: [
+            "igposts/cres-RC/Sanya's Cover series.png"
+        ]
+    },
     hundred: {
         title: "100 Series Designs",
         images: [
